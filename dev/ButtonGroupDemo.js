@@ -34,7 +34,6 @@ const ButtonGroupDemo = React.createClass({
                 <Button
                     shape="default"
                     key={index}
-                    dataKey={item.dataKey}
                     className={classes}
                     >
                     {item.title}
@@ -48,11 +47,11 @@ const ButtonGroupDemo = React.createClass({
                     {buttons}
                 </ButtonGroup>
 
-                <Dropdown  activeKey=""  select onSelect={this.handleDropdownSelect }>
+                {/*<Dropdown  activeKey=""  select onSelect={this.handleDropdownSelect }>
                     <Dropdown.Item eventKey="" >全部</Dropdown.Item>
                     <Dropdown.Item eventKey="set" >人群集合</Dropdown.Item>
                     <Dropdown.Item eventKey="creator" >创建者</Dropdown.Item>
-                </Dropdown>
+                </Dropdown>*/}
             </div>
         );
     }

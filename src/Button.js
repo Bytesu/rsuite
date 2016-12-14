@@ -20,7 +20,7 @@ const Button = React.createClass({
         return {
             classPrefix: 'btn',
             active: false,
-            type:'button',
+            type: 'button',
             disabled: false,
             block: false
         };
@@ -28,25 +28,26 @@ const Button = React.createClass({
     renderAnchor(classes) {
         const Component = this.props.componentClass || Anchor;
         const href = this.props.href || '#';
-
+        const {classPrefix,active,block,...rest} = this.props;
         return (
             <Component
-                {...this.props}
+                {...rest}
                 href={href}
                 className={classes}
-                role="button" >
+                role="button">
                 {this.props.children}
             </Component>
         );
-
     },
     renderButton(classes) {
         const Component = this.props.componentClass || 'button';
+        const {classPrefix,active,block,...rest} = this.props;
+
         return (
             <Component
-                {...this.props}
+                {...rest}
                 className={classes}
-                >
+            >
                 {this.props.children}
             </Component>
         );
