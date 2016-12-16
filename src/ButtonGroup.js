@@ -25,7 +25,7 @@ const ButtonGroup = React.createClass({
     },
     handleClick(index) {
 
-        const { type, onSelect } = this.props;
+        const {type, onSelect} = this.props;
         const activeButton = this.refs[`btn_${index}`];
 
         if (type === 'checkbox') {
@@ -42,7 +42,7 @@ const ButtonGroup = React.createClass({
     },
     render() {
 
-        const { children, className, vertical, block, justified } = this.props;
+        const {children, className, vertical, block, justified} = this.props;
         const classes = classNames({
             'btn-group': true,
             'btn-block': block,
@@ -67,7 +67,7 @@ const ButtonGroup = React.createClass({
             <div
                 {...divProps}
                 className={classes}
-                >
+            >
                 {items}
             </div>
         );

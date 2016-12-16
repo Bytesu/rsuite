@@ -48,5 +48,6 @@ export Table from './Table';
 export Container from './Container';
 export Content from './Content';
 export Panel from './Panel';
+export VMenu from './VMenu';
 export PanelGroup from './PanelGroup';
 

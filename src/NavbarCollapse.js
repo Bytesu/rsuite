@@ -9,7 +9,7 @@ const NavbarCollapse = React.createClass({
     },
     render() {
         const {
-            children,
+            children,dimension,getDimensionValue,classPrefix,
             ...props
         } = this.props;
 

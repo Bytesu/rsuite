@@ -80,6 +80,7 @@ const PanelGroup = React.createClass({
             className,
             accordion,
             children,
+            defaultActiveKey,
             ...props
         } = this.props;
 

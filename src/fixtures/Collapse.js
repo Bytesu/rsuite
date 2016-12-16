@@ -44,11 +44,13 @@ class Collapse extends React.Component {
         let entered = createChainedFunction(this.onEnteredListener, this.props.onEntered);
         let exit = createChainedFunction(this.onExitListener, this.props.onExit);
         let exiting = createChainedFunction(this.onExitingListener, this.props.onExiting);
-
+        let divPros = Object.assign({},this.props);
+        delete divPros.dimension;
+        delete divPros.getDimensionValue;
         return (
             <Transition
                 ref="transition"
-                {...this.props}
+                {...divPros}
                 aria-expanded={this.props.role ? this.props.in : null}
                 className={classNames(this.props.className, { width: this._dimension() === 'width' }) }
                 exitedClassName="collapse"

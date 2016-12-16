@@ -63,6 +63,7 @@ let Navbar = React.createClass({
             componentClass: Component,
             children,
             className,
+            classPrefix,
             ...props
         } = this.props;
 

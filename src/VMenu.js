@@ -4,7 +4,7 @@ import Collapse from './fixtures/Collapse';
 import ClassNameMixin from './mixins/ClassNameMixin';
 
 
-let Panel = React.createClass({
+let VMenu = React.createClass({
     mixins: [ClassNameMixin],
     propTypes: {
         collapsible: React.PropTypes.bool,
@@ -93,7 +93,6 @@ let Panel = React.createClass({
             <Collapse {...collapseProps}>
                 <div {...props}>
                     {this.renderBody() }
-
                 </div>
             </Collapse>
         );
@@ -222,7 +221,7 @@ let Panel = React.createClass({
             panelRole,
             className,
             collapsible,
-            id,header,eventKey,defaultExpanded,expanded,
+            id,
             ...props
         } = this.props;
 
@@ -244,4 +243,4 @@ let Panel = React.createClass({
     }
 });
 
-export default Panel;
+export default VMenu;

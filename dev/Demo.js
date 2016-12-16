@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, ButtonGroup,ButtonToolbar, Dropdown} from '../src';
+import {Button, ButtonGroup, ButtonToolbar, VMenu, Dropdown, Nav, PanelGroup, Panel} from '../src';
 
 const ButtonGroupDemo = React.createClass({
     getInitialState() {
@@ -28,7 +28,6 @@ const ButtonGroupDemo = React.createClass({
             }
         ];
 
-
         return (
             <div className="container">
                 <h1 className="page-title">LeftMenu</h1>
@@ -49,9 +48,28 @@ const ButtonGroupDemo = React.createClass({
                 </ButtonToolbar>
 
                 <ButtonToolbar>
-                    <Button shape='default'  block>Block</Button>
+                    <Button shape='default' block>Block</Button>
                     <Button shape='primary' active block>Block</Button>
                 </ButtonToolbar>
+                <Nav>
+                    <Nav.Item active>Item A</Nav.Item>
+                    <Nav.Item>Item B</Nav.Item>
+                    <Nav.Item>Item C</Nav.Item>
+                    <Nav.Item disabled>Item D</Nav.Item>
+                </Nav>
+                <PanelGroup defaultActiveKey="2" accordion>
+                    <VMenu header="VMenu 1" eventKey="1">VMenu 1 content</VMenu>
+                    <Panel header="Panel 4" eventKey="4">Panel 1 content</Panel>
+                    <VMenu header="VMenu 5" eventKey="5">
+                        <Nav>
+                            <Nav.Item active>Item A</Nav.Item>
+                            <Nav.Item>Item B</Nav.Item>
+                            <Nav.Item>Item C</Nav.Item>
+                        </Nav>
+                    </VMenu>
+                    <Panel header="Panel 2" eventKey="2">Panel 2 content</Panel>
+                    <Panel header="Panel 3" eventKey="3">Panel 3 content</Panel>
+                </PanelGroup>
             </div>
         );
     }

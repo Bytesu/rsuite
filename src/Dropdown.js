@@ -119,7 +119,7 @@ const Dropdown = React.createClass({
             activeKey,
             dropup,
             bothEnds,
-            menuStyle,
+            menuStyle,eventKey,select,active,useAnchor,block,
             componentClass: Component,
             ...props
         } = this.props;
