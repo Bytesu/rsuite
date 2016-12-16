@@ -42,12 +42,12 @@ const ButtonGroup = React.createClass({
     },
     render() {
 
-        const { children, className, vertical_, block_, justified_ } = this.props;
+        const { children, className, vertical, block, justified } = this.props;
         const classes = classNames({
             'btn-group': true,
-            'btn-block': block_,
-            [this.prefix('vertical')]: vertical_,
-            [this.prefix('justified')]: justified_
+            'btn-block': block,
+            [this.prefix('vertical')]: vertical,
+            [this.prefix('justified')]: justified
         }, ...this.getClassNames(), className);
 
 
@@ -58,10 +58,14 @@ const ButtonGroup = React.createClass({
                 onClick: createChainedFunction(() => this.handleClick(index), item.props.onClick)
             }, item.props.children);
         });
-        const {block,justified,vertical,classPrefix,...rest} = this.props;
+        const divProps = Object.assign({}, this.props);
+        delete divProps.block;
+        delete divProps.justified;
+        delete divProps.vertical;
+        delete divProps.classPrefix;
         return (
             <div
-                {...rest}
+                {...divProps}
                 className={classes}
                 >
                 {items}

@@ -30,7 +30,6 @@ const config = {
     ],
     module: {
         loaders: [
-
             {
                 test: /\.js$/,
                 loaders: [

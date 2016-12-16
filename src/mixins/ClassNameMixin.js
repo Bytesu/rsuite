@@ -1,6 +1,6 @@
 import React from 'react';
-import { findDOMNode } from 'react-dom';
-import { hasClass, addClass, removeClass } from 'dom-lib';
+import {findDOMNode} from 'react-dom';
+import {hasClass, addClass, removeClass} from 'dom-lib';
 
 const SIZES = ['lg', 'md', 'sm', 'xs'];
 const SHAPES = ['default', 'primary', 'link', 'inverse', 'success', 'warning', 'danger', 'info'];
@@ -20,7 +20,7 @@ const ClassNameMixin = {
         return classes;
     },
     prefix(className) {
-        let {classPrefix } = this.props;
+        let {classPrefix} = this.props;
         let prefix = classPrefix ? classPrefix + '-' : '';
         return prefix + className;
     },
@@ -28,7 +28,7 @@ const ClassNameMixin = {
         return hasClass(target, className);
     },
     addClass: function (className, target = findDOMNode(this)) {
-        return addClass(target,className);
+        return addClass(target, className);
     },
     removeClass: function (className, target = findDOMNode(this)) {
         return removeClass(target, className);

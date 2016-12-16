@@ -129,21 +129,21 @@ const Dropdown = React.createClass({
             <DropdownToggle
                 {...props}
                 onClick={this.handleClick}
-                >
+            >
                 {this.state.title || title}
             </DropdownToggle>
         );
 
         let Menu = (
             <DropdownMenu
-                onClose={()=>{
+                onClose={()=> {
                     autoClose && this.toggle();
                 }}
                 onSelect={this.handleSelect}
                 activeKey={this.state.activeKey}
                 style={menuStyle}
                 ref='menu'
-                >
+            >
                 {children}
             </DropdownMenu>
         );
@@ -163,12 +163,15 @@ const Dropdown = React.createClass({
             'open': this.state.open
         }, className);
 
+        const divProps = Object.assign({}, props);
+        delete divProps.select;
+        delete divProps.active;
         return (
             <Component
-                {...props}
+                {...divProps}
                 className={classes}
                 role="dropdown"
-                >
+            >
                 {Toggle}
                 {Menu}
             </Component>

@@ -9,7 +9,7 @@
   "scripts": {
     "build": "babel-node tools/build.js",
     "dev": "set NODE_ENV=development && webpack-dev-server --hot --inline --progress --colors --port 3000 --config webpack.dev.config.js",
-    "docs": "rm -rf docs/assets &&  set NODE_ENV=production webpack --watch --progress -colors --config webpack.docs.config.js",
+    "docs": "set NODE_ENV=production webpack --watch --progress -colors --config webpack.docs.config.js",
     "tdd": "karma start",
     "lint": "eslint src  *.js",
     "test": "npm run lint &&  karma start --single-run"

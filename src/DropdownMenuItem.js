@@ -40,6 +40,8 @@ let DropdownMenuItem = React.createClass({
             onSelect,
             onKeyDown,
             componentClass: Component,
+            eventKey,
+            active,
             ...props
         } = this.props;
 
@@ -51,11 +53,11 @@ let DropdownMenuItem = React.createClass({
         if(divider){
             return <li role="separator" className="divider"></li>;
         }
-
+        const divProps = Object.assign({}, props);
         return (
             <li role="presentation" className = {classes} >
                 <Component
-                    {...props}
+                    {...divProps}
                     role="menu-item"
                     tabIndex="-1"
                     onClick={this.handleClick }

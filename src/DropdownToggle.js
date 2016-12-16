@@ -28,10 +28,13 @@ let DorpdownToggle = React.createClass({
         let classes = {
             ['dropdown-toggle'] : true
         };
-
+        const divProps = Object.assign({}, this.props);
+        delete divProps.noCaret;
+        delete divProps.select;
+        delete divProps.useAnchor;
         return (
             <Component
-                {...this.props}
+                {...divProps}
                 className = {classNames(classes, this.props.className)}
                 type = "button"
                 role = "toggle"

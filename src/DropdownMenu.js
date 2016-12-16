@@ -43,7 +43,7 @@ let DorpdownMenu = React.createClass({
     },
     render(){
 
-        let { pullRight, children, className, activeKey, ...props} = this.props;
+        let { pullRight, children, className, activeKey,onClose,classPrefix, ...props} = this.props;
 
         const items = React.Children.map(children,(item, index) => {
             let childProps = {
